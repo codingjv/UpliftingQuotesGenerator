@@ -1,77 +1,84 @@
-@import "compass/css3";
-@import "compass/typography";
-
-*{@include box-sizing(border-box);}
-
-$gutters: 1em/4;
-
+* {
+  box-sizing: border-box;
+}
 
 body {
   background-image: url("http://wallpaperbeta.com/wallpaper_1920x1200/wave_coast_palm_landscapes_1920x1200_hd-wallpaper-46932.jpg");
-  background-repeat: no-repeat; 
-  background-position: center; 
-  background-attachment: fixed; 
-  background-size: cover;  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   min-height: 100%;
   max-width: 100%;
   font-family: sans-serif;
   font-size: 14px;
   line-height: 18px;
-  padding-bottom: $gutters*2;
+  padding-bottom: 0.5em;
 }
-
 
 .wrapper {
-    padding-top: $gutters*2;
-    width: 100%;
-    max-width: 100%;
+  padding-top: 0.5em;
+  width: 100%;
+  max-width: 100%;
 }
 
-
-.container{
+.container {
   min-height: 10px;
-  padding-left: $gutters *2;
-  padding-right: $gutters *2;
-  padding-top: $gutters;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  padding-bottom: $gutters;
+  padding-bottom: 0.25em;
 }
 
-
-.row{
-  @include display-flex(flex);
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  margin-left: -$gutters;
-  margin-right: -$gutters;
+.row {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -0.25em;
+  margin-right: -0.25em;
 }
 
 .col {
-  @include display-flex(flex);
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 40px;
-  padding-right: $gutters;
-  padding-left: $gutters;
-  margin-top: $gutters; 
+  padding-right: 0.25em;
+  padding-left: 0.25em;
+  margin-top: 0.25em;
   box-sizing: border-box;
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
-
 
 .module {
   width: 100%;
   padding: 5px;
-  
-  img{
-    width: 100%;
-  }
+}
+.module img {
+  width: 100%;
 }
 
-
 .col-1-1 {
-  flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
   max-width: 100%;
 }
 
@@ -81,11 +88,13 @@ body {
   max-width: 50%;
 }
 */
-
-.col-1-3{
-  flex-basis: 33.33%;
+.col-1-3 {
+  -webkit-flex-basis: 33.33%;
+      -ms-flex-preferred-size: 33.33%;
+          flex-basis: 33.33%;
   max-width: 33.33%;
 }
+
 /*
 .col-1-4{
   flex-basis: 25%;
@@ -107,15 +116,13 @@ body {
   max-width: 66.66%;
 }
 */
-
-
 #quoteHolder {
   margin-top: 1px;
   border-radius: 10px;
   border: 1px solid #D6EEEC;
   padding: 15px;
   background: transparent;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-family: monospace;
 }
 
@@ -125,7 +132,7 @@ body {
   border: 1px solid #D6EEEC;
   padding: 15px;
   background: transparent;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-family: monospace;
 }
 
@@ -135,7 +142,7 @@ body {
   border: 1px solid #D6EEEC;
   padding: 15px;
   background: transparent;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-family: monospace;
 }
 
@@ -145,7 +152,7 @@ body {
   border: 1px solid #D6EEEC;
   padding: 15px;
   background: transparent;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
   font-family: monospace;
 }
 
@@ -214,7 +221,6 @@ body {
 }
 
 */
-
 .white {
   background: #eee;
   color: #3d3d3d;
@@ -222,19 +228,18 @@ body {
 
 .blue {
   background: DodgerBlue;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .clear {
   background: Clear;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .light {
   background: DodgerBlue;
-  color: rgba(white,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
-
 
 /*
 .red {
@@ -247,63 +252,74 @@ body {
   color: rgba(white,0.9);
 }
 */
-
-
-
-@mixin font($font, $style: normal, $weight: normal) {
-    font-family: $font;
-    font-style:  $style;
-    font-weight: $weight;
+html {
+  font-size: 100%;
+  line-height: 1.5em;
 }
-
-
-@include establish-baseline;
-$base-font-size: 20px;
-$base-line-height: 24px;
-
-//fonts
-
-$default-sans-font:'Helvetica', sans-serif;
-$serif-font:'Roboto Slab', serif;
-$default-font-color: rgba(white,0.9);
-
 
 h1 {
   font-weight: 700;
-  @include adjust-font-size-to(40px);
-  @include rhythm(0, 0, 0, 0, 42px);
-  @include trailing-border(1px, 1, 40px, solid);
+  font-size: 2em;
+  line-height: 1.2em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  border-bottom-width: 0.025em;
+  border-bottom-style: solid;
+  padding-bottom: 0.575em;
 }
 
-
 h3 {
-  @include font($serif-font, normal, 700);
-	@include adjust-font-size-to($base-font-size);
-	@include rhythm(0, 0, 0, 0, $base-font-size);
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
 }
 
 h4 {
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: .125em;
-	@include adjust-font-size-to($base-font-size);
-	@include rhythm(0, 0, 0, 0, $base-font-size);
-	@include trailing-border(1px, 0, $base-font-size, solid);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .125em;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
+  border-bottom-width: 0.05em;
+  border-bottom-style: solid;
+  padding-bottom: -0.05em;
 }
 
 p {
-  @include font($serif-font);
-  @include adjust-font-size-to($base-font-size);
-  @include rhythm(0, 0, 0, 0, $base-font-size);
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0em;
 }
-
 
 blockquote {
-  border-left: 5px solid rgba(black, 0.3);
+  border-left: 5px solid rgba(0, 0, 0, 0.3);
   padding-left: 16px;
-  @include font($serif-font);
+  font-family: "Roboto Slab", serif;
+  font-style: normal;
+  font-weight: normal;
   font-style: italic;
-  @include adjust-font-size-to($base-font-size * 1.2);
-  @include rhythm(0, 0, 0, 1, $base-font-size * 1.2);	
+  font-size: 1.2em;
+  line-height: 2em;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1em;
 }
-

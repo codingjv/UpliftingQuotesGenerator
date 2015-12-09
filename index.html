@@ -1,58 +1,49 @@
-.wrapper
-  .container
-    h1.clear Uplifting Quotes Generator
-    .row
-      .col.col-1-1  
-        .module.clear
-          <div class="well" id="quoteHolder">
-            </div>
-               <div>          
-               <button type="submit" class="btn btn-info" id="showQuote">New Quote</button>
-               <button class="btn btn-info" id="tweetIt"><i class="fa fa-twitter"> Share Quote</i></button>
-          </div>
-
-  .container
-    .row
-        .col.col-1-3.sm
-          .module.clear
-            <button type="submit" class="btn btn-info btn-xs" id="saveQuote1">Saved Quote #1</button>
-            <button class="btn btn-info btn-xs" id="tweetIt1"><i class="fa fa-twitter"> Share 1st Saved Quote</i></button>
-            <div class="well" id="quoteHolder1"></div>
- 
-
-        .col.col-1-3.md
-          .module.clear
-            <button type="submit" class="btn btn-info btn-xs" id="saveQuote2">Saved Quote #2</button>
-            <button class="btn btn-info btn-xs" id="tweetIt2"><i class="fa fa-twitter"> Share 2nd Saved Quote</i></button>
-            <div class="well" id="quoteHolder2"></div>
-
-        .col.col-1-3.md
-          .module.clear
-            <button type="submit" class="btn btn-info btn-xs" id="saveQuote3">Saved Quote #3</button>
-            <button class="btn btn-info btn-xs" id="tweetIt3"><i class="fa fa-twitter"> Share 3rd Saved Quote</i></button>
-            <div class="well" id="quoteHolder3"></div>
-
-<div class="text-center clear">
-<p>&copy; Copyright 2015</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./compcss.css" type="text/css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./fn.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+  <div class="container">
+    <h1 class="clear">
+      Uplifting Quotes Generator
+    </h1>
+    <div class="row">
+      <div class="col col-1-1">
+        <div class="module clear">
+          <div class="well" id="quoteHolder"></div><div>          <button type="submit" class="btn btn-info" id="showQuote">New Quote</button><button class="btn btn-info" id="tweetIt"><i class="fa fa-twitter"> Share Quote</i></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-1-3 sm">
+        <div class="module clear">
+          <button type="submit" class="btn btn-info btn-xs" id="saveQuote1">Saved Quote #1</button><button class="btn btn-info btn-xs" id="tweetIt1"><i class="fa fa-twitter"> Share 1st Saved Quote</i></button><div class="well" id="quoteHolder1"></div>
+        </div>
+      </div>
+      <div class="col col-1-3 md">
+        <div class="module clear">
+          <button type="submit" class="btn btn-info btn-xs" id="saveQuote2">Saved Quote #2</button><button class="btn btn-info btn-xs" id="tweetIt2"><i class="fa fa-twitter"> Share 2nd Saved Quote</i></button><div class="well" id="quoteHolder2"></div>
+        </div>
+      </div>
+      <div class="col col-1-3 md">
+        <div class="module clear">
+          <button type="submit" class="btn btn-info btn-xs" id="saveQuote3">Saved Quote #3</button><button class="btn btn-info btn-xs" id="tweetIt3"><i class="fa fa-twitter"> Share 3rd Saved Quote</i></button><div class="well" id="quoteHolder3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-/*  
-    .row
-      .col.col-2-3.md
-        .module.white
-          h4 col-2-3.md Max 767
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed deserunt, ullam dolores perferendis odio ducimus laudantium placeat dicta eos impedit voluptates ab doloribus nobis porro sapiente. Expedita delectus enim, impedit?      
-      .col.col-1-3.md
-        .module.white.align-self-flex-center
-          blockquote col-1-3.md Max 767 <br> With Vertical Rhythm amet, consectetur adipisicing elit. Sed deserunt, ullam dolores perferendis odio ducimus laudantium placeat dicta eos impedit voluptates ab doloribus nobis porro sapiente. Expedita delectus enim, impedit?*/
-
-    .row
-     -for i in(1..3) 
-        .col.col-1-3.md
-          .module.blue
-            h3 col-1-3.md: Max 767
-            p Saved Quote 1
-  
- 
-     
+<div class="text-center clear"><p>&copy; Copyright 2015</p></div>
+  </body>
+</html>
